@@ -2,9 +2,8 @@ import './App.css';
 import { CongratulationsMessage } from './CongratulationsMessage';
 import React ,{useState} from 'react';
 import { BrowserRouter as Router,Route, Link, Switch } from 'react-router-dom';
-import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPage } from './pages';
+import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPage, ControlledFormPage } from './pages';
 import {CounterButton} from './CounterButton';
-import { ProtecntedPage } from './pages/ProtectedPage';
 function App() {
   
   const [numberOfClicks, setNumberOfClicks] = useState(0);
@@ -31,8 +30,14 @@ function App() {
             <PeopleListPage />
           </Route>
 
+          <Route>
+            <ControlledFormPage/>
+
+          </Route>          
+    
+
           <Route path="/protected">
-            <ProtecntedPage/>
+            <ProtectedPage/>
           </Route>
 
           <Route>

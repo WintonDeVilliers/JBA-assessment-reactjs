@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 
-export const ProtecntedPage = () => {
+export const ProtectedPage = () => {
     const history = useHistory();
 
     const isAuth = true;
@@ -15,7 +15,5 @@ export const ProtecntedPage = () => {
     return(
         <h1>only authed users can see this</h1>
     );
-   
-      
     
 }
