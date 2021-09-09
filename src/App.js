@@ -1,8 +1,8 @@
 import './App.css';
 import { CongratulationsMessage } from './CongratulationsMessage';
 import React ,{useState} from 'react';
-import { BrowserRouter as Router,Route, Link } from 'react-router-dom';
-import { HomePage, CounterButtonPage, PeopleListPage } from './pages';
+import { BrowserRouter as Router,Route, Link, Switch } from 'react-router-dom';
+import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage } from './pages';
 import {CounterButton} from './CounterButton';
 function App() {
   
@@ -15,20 +15,26 @@ function App() {
   
     <div className="App">
       <Router>
-      <Link to= "/counter">Got to counter Button Page</Link>
-      <Link to="/people-list">Got to people list Page</Link>
-      
-        <Route path= "/" exact>
-          <HomePage/>
-        </Route>
+        <Link to="/counter">Got to counter Button Page</Link>
+        <Link to="/people-list">Got to people list Page</Link>
+      <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
 
-        <Route path= "/counter">
-          <CounterButtonPage/>
-        </Route>
+          <Route path="/counter">
+            <CounterButtonPage />
+          </Route>
 
-        <Route path= "/people-list">
-          <PeopleListPage/>
-        </Route>
+          <Route path="/people-list">
+            <PeopleListPage />
+          </Route>
+
+          <Route>
+            <NotFoundPage />
+          </Route>
+          
+      </Switch>
 
       </Router>
     </div>

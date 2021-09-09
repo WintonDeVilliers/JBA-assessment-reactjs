@@ -6,7 +6,7 @@ import { CongratulationsMessage } from '../CongratulationsMessage';
 
 export const CounterButtonPage = () => {
     // const {name} = useParams(); // how we get our url parameter 'out of' useParams
-    const location = useLocation();
+    const location = useLocation();  // http://localhost:3000/counter?startingValue=7 <<----example
     const startingValue = parse(location.search).startingValue;
     const [numberOfClicks, setNumberOfClicks] = useState(Number(startingValue));
     const [hideMessage, setHideMessage] = useState(false);
