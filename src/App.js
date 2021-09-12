@@ -1,17 +1,17 @@
 import './App.css';
-import { CongratulationsMessage } from './CongratulationsMessage';
-import React ,{useState} from 'react';
-import { BrowserRouter as Router,Route, Link, Switch } from 'react-router-dom';
-import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPage, ControlledFormPage , UncontrolledFormPage} from './pages';
-import {CounterButton} from './CounterButton';
+// import { CongratulationsMessage } from './CongratulationsMessage';
+import React from 'react';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPage, ControlledFormPage , UncontrolledFormPage, UserProfilePage} from './pages';
+// import {CounterButton} from './CounterButton';
 import {NavBar} from './NavBar';
 function App() {
   
-  const [numberOfClicks, setNumberOfClicks] = useState(0);
-  const [hideMessage, setHideMessage] = useState(false);
+  // const [numberOfClicks, setNumberOfClicks] = useState(0);
+  // const [hideMessage, setHideMessage] = useState(false);
 
 
-  const increment = () => setNumberOfClicks(numberOfClicks + 1);
+  // const increment = () => setNumberOfClicks(numberOfClicks + 1);
   return (
   
     <div className="App">
@@ -31,17 +31,21 @@ function App() {
               <PeopleListPage />
             </Route>
 
-            <Route>
+            {/* <Route>
               <ControlledFormPage />
-            </Route>
+            </Route> */}
 
-            <Route path="/uncontrolled">
+            {/* <Route path="/uncontrolled">
               <UncontrolledFormPage />
-            </Route>
+            </Route> */}
 
 
             <Route path="/protected">
               <ProtectedPage />
+            </Route>
+
+            <Route path="/user">
+              <UserProfilePage />
             </Route>
 
             <Route>
