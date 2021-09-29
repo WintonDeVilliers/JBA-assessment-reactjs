@@ -1,17 +1,11 @@
 import './App.css';
-// import { CongratulationsMessage } from './CongratulationsMessage';
 import React from 'react';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
-import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPage, ControlledFormPage , UncontrolledFormPage, UserProfilePage} from './pages';
-// import {CounterButton} from './CounterButton';
+import { HomePage, NameFormPage, NotFoundPage} from './pages';
 import {NavBar} from './NavBar';
+
 function App() {
   
-  // const [numberOfClicks, setNumberOfClicks] = useState(0);
-  // const [hideMessage, setHideMessage] = useState(false);
-
-
-  // const increment = () => setNumberOfClicks(numberOfClicks + 1);
   return (
   
     <div className="App">
@@ -23,29 +17,8 @@ function App() {
               <HomePage />
             </Route>
 
-            <Route path="/counter">
-              <CounterButtonPage />
-            </Route>
-
-            <Route path="/people-list">
-              <PeopleListPage />
-            </Route>
-
-            {/* <Route>
-              <ControlledFormPage />
-            </Route> */}
-
-            {/* <Route path="/uncontrolled">
-              <UncontrolledFormPage />
-            </Route> */}
-
-
-            <Route path="/protected">
-              <ProtectedPage />
-            </Route>
-
-            <Route path="/user">
-              <UserProfilePage />
+            <Route path="/assessment">
+              <NameFormPage />
             </Route>
 
             <Route>
